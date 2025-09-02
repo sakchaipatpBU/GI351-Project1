@@ -15,8 +15,11 @@ public class PlayerController : MonoBehaviour
     private InputAction interactAction;
     private InputAction escapeAction;
 
-    private bool canInteract;
+    private bool canInteractPizzaStore;
+    private bool canInteractDelivery;
     public bool canMove;
+
+    bool isHoldPizza = false;
 
     private void Awake()
     {
@@ -41,6 +44,50 @@ public class PlayerController : MonoBehaviour
         transform.Translate(horizontalInput * moveSpeed * Time.deltaTime * Vector3.right);
         transform.Translate(verticalInput * moveSpeed * Time.deltaTime * Vector3.up);
 
+        if (interactAction.IsPressed() && (canInteractDelivery || canInteractPizzaStore))
+        {
+            Interact();
+        }
+    }
 
+    void Interact()
+    {
+        if(canInteractPizzaStore)
+        {
+            isHoldPizza = true;
+        }
+        else if (canInteractDelivery && isHoldPizza)
+        {
+            isHoldPizza = false;
+            // add score
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Delivery"))
+        {
+            canInteractDelivery = true;
+            Debug.Log("Can Innteract Delivery now");
+        }
+        else if(collision.gameObject.CompareTag("PizzaStore"))
+        {
+            canInteractPizzaStore = true;
+            Debug.Log("Can Innteract PizzaStore now");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Delivery") || collision.gameObject.CompareTag("PizzaStore"))
+        {
+            canInteractDelivery = false;
+            Debug.Log("Can NOT Innteract Delivery now");
+        }
+        else if (collision.gameObject.CompareTag("PizzaStore")) 
+        {
+            canInteractPizzaStore = false;
+            Debug.Log("Can NOT Innteract PizzaStore now");
+        }
     }
 }
