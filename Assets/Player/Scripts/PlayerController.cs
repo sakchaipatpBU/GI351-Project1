@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             isHoldPizza = false;
             // add score
+            GameManager.GetInstance().AddScore();
         }
     }
 
