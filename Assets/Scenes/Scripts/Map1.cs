@@ -21,7 +21,8 @@ public class Map1 : MonoBehaviour
         playerController = PlayerController.GetInstance();
         gameManager.ResetScore();
         gameManager.mapTime = mapTime;
-        gameManager.isGameOver = false;
+        gameManager.isWin = false;
+        gameManager.isLose = false;
         playerController.canMove = true;
     }
 
@@ -31,8 +32,9 @@ public class Map1 : MonoBehaviour
         {
             winUi.SetActive(true);
             playerController.canMove = false;
+            gameManager.isWin = true;
         }
-        if (gameManager.isGameOver)
+        if (gameManager.isLose)
         {
             loseUi.SetActive(true);
         }

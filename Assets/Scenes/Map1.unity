@@ -216,7 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerController: {fileID: 0}
   mapTime: 0
-  isGameOver: 0
+  isLose: 0
+  isWin: 0
   score: 0
   textScore: {fileID: 1128484925}
   textTimer: {fileID: 258549756}
@@ -301,8 +302,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190256
-  m_fontColor: {r: 0.6886792, g: 0, b: 0, a: 1}
+    rgba: 4292861951
+  m_fontColor: {r: 1, g: 0.8726415, b: 0.8726415, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1256,7 +1257,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.017222073, y: 0.0070454106}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1266,7 +1267,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.48, y: 0.48}
+  m_Size: {x: 0.19192097, y: 0.23106216}
   m_EdgeRadius: 0
 --- !u!114 &830836347
 MonoBehaviour:

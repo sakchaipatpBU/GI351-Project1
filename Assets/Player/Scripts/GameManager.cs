@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     // public float gameTime;
     public float mapTime;
-    public bool isGameOver;
+    public bool isLose;
+    public bool isWin;
 
     public int score;
 
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isGameOver) return;
+        if (isLose||isWin) return;
         if (Time.time > mapTime)
         {
             GameOver();
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        isGameOver = true;
+        isLose = true;
         playerController.canMove = false;
     }
 
