@@ -1,11 +1,20 @@
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public PlayerController playerController;
-    public float gameTime;
+    // public float gameTime;
+    public float mapTime;
+    public bool isGameOver;
 
     public int score;
+
+    public TMP_Text textScore;
+    public TMP_Text textTimer;
+
 
     private static GameManager instance;
     public static GameManager GetInstance()
@@ -28,14 +37,17 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        /*if (Time.time > gameTime)
+        if (isGameOver) return;
+        if (Time.time > mapTime)
         {
             GameOver();
-        }*/
+        }
+        textTimer.text = ((int)(mapTime - Time.time)).ToString();
     }
 
     public void GameOver()
     {
+        isGameOver = true;
         playerController.canMove = false;
     }
 
@@ -43,11 +55,20 @@ public class GameManager : MonoBehaviour
     {
         score++;
         Debug.Log($"Add 1 score => {score}");
+        UpdateScore();
     }
 
     public void ResetScore()
     {
         score = 0;
         Debug.Log($"Score reset => {score}");
+        UpdateScore();
     }
+
+    public void UpdateScore()
+    {
+        textScore.text = "Score : "+score.ToString();
+    }
+
+    
 }

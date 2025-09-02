@@ -1,0 +1,41 @@
+using UnityEngine;
+
+public class Map1 : MonoBehaviour
+{
+    public GameObject winUi;
+    public GameObject loseUi;
+    public int pizzaOrderWin = 3;
+    public float mapTime = 60;
+
+    public GameManager gameManager;
+    public PlayerController playerController;
+
+    private void Awake()
+    {
+        winUi.SetActive(false);
+        loseUi.SetActive(false);
+    }
+    private void Start()
+    {
+        gameManager = GameManager.GetInstance();
+        playerController = PlayerController.GetInstance();
+        gameManager.ResetScore();
+        gameManager.mapTime = mapTime;
+        gameManager.isGameOver = false;
+        playerController.canMove = true;
+    }
+
+    private void Update()
+    {
+        if(gameManager.score >= pizzaOrderWin)
+        {
+            winUi.SetActive(true);
+            playerController.canMove = false;
+        }
+        if (gameManager.isGameOver)
+        {
+            loseUi.SetActive(true);
+        }
+
+    }
+}
