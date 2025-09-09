@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
+    public Transform[] locations;
+    public Transform tempLocation;
+    public Transform newLocation;
+    int rand;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -20,5 +25,11 @@ public class Delivery : MonoBehaviour
             Debug.Log("Can NOT Innteract Delivery now");
 
         }
+    }
+
+    public void SetLocation()
+    {
+        rand = Random.Range(0, locations.Length);
+
     }
 }

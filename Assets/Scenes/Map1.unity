@@ -514,28 +514,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1718452279492471045, guid: 469eea282affde048b66f364668e0c8b, type: 3}
   m_PrefabInstance: {fileID: 416931564}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &397155363 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3534624415396273318, guid: 60c60a8290bda4444a5a7185909dd25f, type: 3}
-  m_PrefabInstance: {fileID: 640748727}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &397155364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7583070972875741331, guid: 60c60a8290bda4444a5a7185909dd25f, type: 3}
   m_PrefabInstance: {fileID: 640748727}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &397155368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397155363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc5a3a16e2c6365419dd5fc568eb7e53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PizzaStore
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,10 +715,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 704238536}
     m_Modifications:
-    - target: {fileID: 3829785000557923846, guid: ef0d4bf12b1d06942a29bea653437dd5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3953090462486135041, guid: ef0d4bf12b1d06942a29bea653437dd5, type: 3}
       propertyPath: m_Name
       value: delivery
@@ -783,10 +762,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3953090462486135041, guid: ef0d4bf12b1d06942a29bea653437dd5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 855386838}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef0d4bf12b1d06942a29bea653437dd5, type: 3}
 --- !u!1 &592839933
 GameObject:
@@ -932,10 +908,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 704238536}
     m_Modifications:
-    - target: {fileID: 2419666438926742134, guid: 60c60a8290bda4444a5a7185909dd25f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3534624415396273318, guid: 60c60a8290bda4444a5a7185909dd25f, type: 3}
       propertyPath: m_Name
       value: store
@@ -983,10 +955,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3534624415396273318, guid: 60c60a8290bda4444a5a7185909dd25f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 397155368}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60c60a8290bda4444a5a7185909dd25f, type: 3}
 --- !u!1 &704238535
 GameObject:
@@ -1364,28 +1333,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &855386834 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3953090462486135041, guid: ef0d4bf12b1d06942a29bea653437dd5, type: 3}
-  m_PrefabInstance: {fileID: 530257076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &855386835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8097958880312292667, guid: ef0d4bf12b1d06942a29bea653437dd5, type: 3}
   m_PrefabInstance: {fileID: 530257076}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &855386838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855386834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9464cf27c66ebc24798b0e8a0cc87f1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Delivery
 --- !u!4 &906001299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1718452279492471045, guid: 469eea282affde048b66f364668e0c8b, type: 3}

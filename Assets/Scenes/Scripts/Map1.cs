@@ -24,6 +24,8 @@ public class Map1 : MonoBehaviour
         gameManager.isWin = false;
         gameManager.isLose = false;
         playerController.canMove = true;
+
+        RandomOrderLocation.Instance.RandomizeAndInstantiateOrderLocation();
     }
 
     private void Update()
@@ -38,6 +40,5 @@ public class Map1 : MonoBehaviour
         {
             loseUi.SetActive(true);
         }
-
     }
 }

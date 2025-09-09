@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     void Interact()
     {
-        if(canInteractPizzaStore)
+        if (canInteractPizzaStore)
         {
             isHoldPizza = true;
         }
@@ -91,6 +91,10 @@ public class PlayerController : MonoBehaviour
             isHoldPizza = false;
             // add score
             GameManager.GetInstance().AddScore();
+
+            RandomOrderLocation.Instance.ChangeDeliveryLocation();
+
+            RandomOrderLocation.Instance.ChangeStoreLocation();
         }
     }
 
@@ -149,5 +153,5 @@ public class PlayerController : MonoBehaviour
         }
     }*/
 
-    
+
 }

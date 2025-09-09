@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
         }
-        textTimer.text = ((int)(mapTime - Time.time)).ToString();
+        textTimer.text = "Time : "+((int)(mapTime - Time.time)).ToString();
     }
 
     public void GameOver()

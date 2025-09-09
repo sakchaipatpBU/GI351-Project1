@@ -5,9 +5,12 @@ public class RandomOrderLocation : MonoBehaviour
 {
     public static RandomOrderLocation Instance { get; private set; }
 
-    public GameObject[] PossibleDeliveryLocation;
+    public GameObject[] PossibleLocation;
     public GameObject DeliveryLocationPrefab;
     public GameObject PizzaStorePrefab;
+
+    Vector3 pizzaStoreLocation;
+    Vector3 deliveryLocation;
 
     float minimumDistanceBetweenDeliveryLocationAndPizzaStore = 5f;
 
@@ -23,51 +26,71 @@ public class RandomOrderLocation : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void RandomizeAndInstantiateOrderLocation()
+    public void RandomizeAndInstantiateOrderLocation() // random both store and delivery place
     {
         int randomDeliveryLocation;
         int randomPizzaStoreLocation;
-        Vector3 deliveryLocation;
-        Vector3 pizzaStoreLocation;
-        do //prevent same location and lessthan min distance
+
+
+        do //prevent same location and less than min distance
         {
-            randomDeliveryLocation = UnityEngine.Random.Range(0, PossibleDeliveryLocation.Length);
-            randomPizzaStoreLocation = UnityEngine.Random.Range(0, PossibleDeliveryLocation.Length);
+            randomDeliveryLocation = UnityEngine.Random.Range(0, PossibleLocation.Length);
+            randomPizzaStoreLocation = UnityEngine.Random.Range(0, PossibleLocation.Length);
 
             //delivery location
-            deliveryLocation = PossibleDeliveryLocation[randomDeliveryLocation].transform.position;
+            deliveryLocation = PossibleLocation[randomDeliveryLocation].transform.position;
             deliveryLocation.z = 0;
 
             //recieve pizza location
-            pizzaStoreLocation = PossibleDeliveryLocation[randomPizzaStoreLocation].transform.position;
+            pizzaStoreLocation = PossibleLocation[randomPizzaStoreLocation].transform.position;
             pizzaStoreLocation.z = 0;
+
 
         } while (randomDeliveryLocation == randomPizzaStoreLocation || Vector3.Distance(deliveryLocation, pizzaStoreLocation) <= minimumDistanceBetweenDeliveryLocationAndPizzaStore);
 
-        /*
-        //delivery location
-        Vector3 deliveryLocation = PossibleDeliveryLocation[randomDeliveryLocation].transform.position;
-        deliveryLocation.z = 0;
-
-        //recieve pizza location
-        Vector3 pizzaStoreLocation = PossibleDeliveryLocation[randomPizzaStoreLocation].transform.position;
-        pizzaStoreLocation.z = 0;
-        */
-        
         Instantiate(DeliveryLocationPrefab, deliveryLocation, quaternion.identity);
         Instantiate(PizzaStorePrefab, pizzaStoreLocation, quaternion.identity);
     }
-    
+
+    public void ChangeDeliveryLocation() // random only delivery place
+    {
+        int randomDeliveryLocation;
+
+
+        do //prevent same location and lessthan min distance
+        {
+            randomDeliveryLocation = UnityEngine.Random.Range(0, PossibleLocation.Length);
+
+            //delivery location
+            deliveryLocation = PossibleLocation[randomDeliveryLocation].transform.position;
+            deliveryLocation.z = 0;
+
+
+        } while (deliveryLocation == pizzaStoreLocation || Vector3.Distance(deliveryLocation, pizzaStoreLocation) <= minimumDistanceBetweenDeliveryLocationAndPizzaStore);
+
+        DeliveryLocationPrefab.transform.position = deliveryLocation;
+
+    }
+
+    public void ChangeStoreLocation() // random only delivery place
+    {
+        int randomStoreLocation;
+
+
+        do //prevent same location and lessthan min distance
+        {
+            randomStoreLocation = UnityEngine.Random.Range(0, PossibleLocation.Length);
+
+            //delivery location
+            pizzaStoreLocation = PossibleLocation[randomStoreLocation].transform.position;
+            pizzaStoreLocation.z = 0;
+
+
+        } while (deliveryLocation == pizzaStoreLocation || Vector3.Distance(deliveryLocation, pizzaStoreLocation) <= minimumDistanceBetweenDeliveryLocationAndPizzaStore);
+
+        PizzaStorePrefab.transform.position = pizzaStoreLocation;
+
+    }
+
 }
