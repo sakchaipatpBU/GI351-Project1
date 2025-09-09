@@ -106,6 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpeedBoostItem
   boostAmount: 3
   boostDuration: 5
+  spawnCooldown: 5
+  outOfMap: {x: -14.5, y: 0, z: 0}
 --- !u!61 &1052127676048780359
 BoxCollider2D:
   m_ObjectHideFlags: 0

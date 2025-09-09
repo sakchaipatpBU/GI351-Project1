@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     // public float gameTime;
     public float mapTime;
+    public float currentTime;
     public bool isLose;
     public bool isWin;
 
@@ -40,15 +41,17 @@ public class GameManager : MonoBehaviour
 
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
+    
 
     private void Update()
     {
         if (isLose||isWin) return;
-        if (Time.time > mapTime)
+        if (currentTime > mapTime)
         {
             GameOver();
         }
-        textTimer.text = "Time : "+((int)(mapTime - Time.time)).ToString();
+        textTimer.text = "Time : "+((int)(mapTime - currentTime)).ToString();
+        currentTime += Time.deltaTime;
     }
 
     public void GameOver()
@@ -100,5 +103,10 @@ public class GameManager : MonoBehaviour
     public void OnResumeClicked()
     {
         PauseDisable();
+    }
+    public void OnRestartClicked()
+    {
+        string activeSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(activeSceneName);
     }
 }
