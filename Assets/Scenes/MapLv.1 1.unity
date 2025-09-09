@@ -5843,7 +5843,7 @@ Transform:
   m_GameObject: {fileID: 621183830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.7503796, y: 3.57, z: -14.76104}
+  m_LocalPosition: {x: -6.7503796, y: 5.1, z: -14.76104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8259,7 +8259,7 @@ Transform:
   m_GameObject: {fileID: 752322356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.86, y: -4.27, z: -14.76104}
+  m_LocalPosition: {x: 4.29962, y: -4.27, z: -14.76104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17806,7 +17806,7 @@ Transform:
   m_GameObject: {fileID: 1562938770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.48, y: 3.1, z: -14.76104}
+  m_LocalPosition: {x: 6.5096197, y: 3.1, z: -14.76104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19374,7 +19374,7 @@ Transform:
   m_GameObject: {fileID: 1723524103}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.39, y: -1.75, z: -14.76104}
+  m_LocalPosition: {x: -6.7503796, y: 1.27, z: -14.76104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21138,7 +21138,6 @@ MonoBehaviour:
   - {fileID: 1314921954}
   - {fileID: 931335473}
   bananaPrefab: {fileID: 1908704404702610403, guid: 2c1720f9c87f72b478dd44556f8149ca, type: 3}
-  bananaCount: 3
 --- !u!4 &1838320852
 Transform:
   m_ObjectHideFlags: 0
