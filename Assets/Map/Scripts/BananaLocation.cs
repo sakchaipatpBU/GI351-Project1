@@ -5,7 +5,7 @@ public class BananaLocation : MonoBehaviour
     public GameObject[] bananaLocation;
     public GameObject bananaPrefab;
 
-
+    public int bananaCount = 3 ;
     int rand;
     Vector3 newBananaLocation;
     public static BananaLocation Instance { get; private set; }
@@ -23,9 +23,11 @@ public class BananaLocation : MonoBehaviour
     }
     private void Start()
     {
-        Instantiate(bananaPrefab, SetNewBananaLocation(), Quaternion.identity);
-        Instantiate(bananaPrefab, SetNewBananaLocation(), Quaternion.identity);
-        Instantiate(bananaPrefab, SetNewBananaLocation(), Quaternion.identity);
+        
+        for (int i = 0; i < bananaCount; i++)
+        {
+            Instantiate(bananaPrefab, SetNewBananaLocation(), Quaternion.identity);
+        }
     }
 
     public Vector3 SetNewBananaLocation()
