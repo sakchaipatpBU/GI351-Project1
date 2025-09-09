@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool canMove;
 
     public bool isHoldPizza = false;
+    
 
     private static PlayerController instance;
     public static PlayerController GetInstance()
@@ -76,13 +77,13 @@ public class PlayerController : MonoBehaviour
         }
         if (interactAction.IsPressed())
         {
-            Debug.Log("Iteract");
+            Debug.Log("Interact");
         }
     }
 
     void Interact()
     {
-        if(canInteractPizzaStore)
+        if (canInteractPizzaStore)
         {
             isHoldPizza = true;
         }
@@ -91,6 +92,12 @@ public class PlayerController : MonoBehaviour
             isHoldPizza = false;
             // add score
             GameManager.GetInstance().AddScore();
+
+            //destroy delivery place after complete a delivery
+            //Delivery.Instance.DestroyItSelf();
+
+            //random new delivery place
+            RandomOrderLocation.Instance.RandomizeAndInstantiateDeliveryOnly();
         }
     }
 

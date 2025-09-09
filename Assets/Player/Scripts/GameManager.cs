@@ -36,9 +36,14 @@ public class GameManager : MonoBehaviour
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
+    private void Start()
+    {
+        RandomOrderLocation.Instance.RandomizeAndInstantiateOrderLocation();
+    }
+
     private void Update()
     {
-        if (isLose||isWin) return;
+        if (isLose || isWin) return;
         if (Time.time > mapTime)
         {
             GameOver();
