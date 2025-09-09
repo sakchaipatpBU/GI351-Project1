@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3d66c417adf2a458e0827b59a8470e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Banana
-  stunDuration: 2
+  stunDuration: 3
   looptype: 36
   bananaOutOfMap: {x: -35, y: 0, z: 0}
 --- !u!61 &-1384348945186873007

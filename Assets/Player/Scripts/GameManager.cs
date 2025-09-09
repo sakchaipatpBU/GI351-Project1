@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public string mainMenuName = "MainMenu";
     public string lv1Name = "MapLv.1 1";
+    public string lv2Name = "GameLv2";
 
 
     private static GameManager instance;
@@ -121,5 +122,13 @@ public class GameManager : MonoBehaviour
 
         string activeSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(activeSceneName);
+    }
+
+    public void OnNextLvClicked()
+    {
+        SoundManager.Instance.PlaySFX("CilckButton");
+
+        SceneManager.LoadScene(lv2Name);
+
     }
 }
