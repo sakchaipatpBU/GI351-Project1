@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
