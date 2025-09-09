@@ -10,6 +10,9 @@ public class Map1 : MonoBehaviour
     public GameManager gameManager;
     public PlayerController playerController;
 
+    private bool hasPlayedWinSound = false;
+    private bool hasPlayedLoseSound = false;
+
     private void Awake()
     {
         winUi.SetActive(false);
@@ -33,17 +36,28 @@ public class Map1 : MonoBehaviour
 
     private void Update()
     {
-        if(gameManager.score >= pizzaOrderWin)
+        if (gameManager.score >= pizzaOrderWin && !gameManager.isWin)
         {
-            SoundManager.Instance.PlaySFX("Win");
-            winUi.SetActive(true);
-            playerController.canMove = false;
             gameManager.isWin = true;
+            playerController.canMove = false;
+            winUi.SetActive(true);
+
+            if (!hasPlayedWinSound)
+            {
+                SoundManager.Instance.PlaySFX("Win");
+                hasPlayedWinSound = true;
+            }
         }
+
         if (gameManager.isLose)
         {
-            SoundManager.Instance.PlaySFX("Lose");
             loseUi.SetActive(true);
+
+            if (!hasPlayedLoseSound)
+            {
+                SoundManager.Instance.PlaySFX("Lose");
+                hasPlayedLoseSound = true;
+            }
         }
     }
 }

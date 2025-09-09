@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public bool isHoldPizza = false;
     public bool isPause = false;
 
+    public GameObject pizzaInHand;
+
     private static PlayerController instance;
     public static PlayerController GetInstance()
     {
@@ -63,6 +65,8 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             return;
         }
+
+        pizzaInHand.SetActive(isHoldPizza);
 
         horizontalInput = moveAction.ReadValue<Vector2>().x;
         verticalInput = moveAction.ReadValue<Vector2>().y;
