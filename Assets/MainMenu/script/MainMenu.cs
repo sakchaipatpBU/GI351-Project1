@@ -3,15 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string lv1Name = "MapLv.1 1";
     void Start()
     {
 
     }
     
-    public void OnLv1Clicked()
+    public void StartGame()
     {
-        SceneManager.LoadScene(lv1Name);
+        SceneManager.LoadScene("GameLv1");
     }
-    
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game");
+        Application.Quit();
+    }
+
+    public void HowToPlay()
+    {
+        Debug.Log("HTP");
+        SceneManager.LoadScene("HowToPlay");
+    }
+
+    public void Credit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
+
+    public void GoMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
