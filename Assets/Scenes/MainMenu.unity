@@ -16152,7 +16152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6ab2bf004fc5048a1763e306fa5fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  lv1Name: MapLv.1 1
+  lv1Name: GameLv1
   howToPlayName: HowToPlay
   mainMenuName: MainMenu
 --- !u!1 &1949473033

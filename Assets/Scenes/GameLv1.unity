@@ -4354,7 +4354,7 @@ MonoBehaviour:
   textTimer: {fileID: 1045366446}
   pausePanel: {fileID: 1014008716}
   mainMenuName: MainMenu
-  lv1Name: MapLv.1 1
+  lv1Name: GameLv1
 --- !u!4 &473545800
 Transform:
   m_ObjectHideFlags: 0
