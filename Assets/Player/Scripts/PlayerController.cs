@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool canMove;
 
     public bool isHoldPizza = false;
+    public bool isPause = false;
 
     private static PlayerController instance;
     public static PlayerController GetInstance()
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         interactAction = InputSystem.actions.FindAction("Interact");
         escapeAction = InputSystem.actions.FindAction("Escape");
         canMove = true;
+        isPause = false;
 
     }
     void Start()
@@ -77,6 +79,18 @@ public class PlayerController : MonoBehaviour
         if (interactAction.IsPressed())
         {
             Debug.Log("Iteract");
+        }
+
+        if (escapeAction.triggered)
+        {
+            if(!isPause)
+            {
+                GameManager.GetInstance().PauseEnnable();
+            }
+            else
+            {
+                GameManager.GetInstance().PauseDisable();
+            }
         }
     }
 

@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text textScore;
     public TMP_Text textTimer;
 
+    public GameObject pausePanel;
+
+    public string mainMenuName = "MainMenu";
+    public string lv1Name = "MapLv.1 1";
+
 
     private static GameManager instance;
     public static GameManager GetInstance()
@@ -71,5 +76,29 @@ public class GameManager : MonoBehaviour
         textScore.text = "Score : "+score.ToString();
     }
 
-    
+    public void PauseEnnable()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f;
+        playerController.isPause = true;
+    }
+    public void PauseDisable()
+    {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+        playerController.isPause = false;
+    }
+
+    public void OnMainMenuClicked()
+    {
+        SceneManager.LoadScene(mainMenuName);
+    }
+    public void OnLv1Clicked()
+    {
+        SceneManager.LoadScene(lv1Name);
+    }
+    public void OnResumeClicked()
+    {
+        PauseDisable();
+    }
 }
