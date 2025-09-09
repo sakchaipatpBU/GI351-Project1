@@ -8,6 +8,7 @@ public class Banana : MonoBehaviour
     PlayerController playerController;
     GameObject playerObject;
     [SerializeField] LeanTweenType looptype;
+    public Vector3 bananaOutOfMap = new Vector3(-35,0,0);
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -18,10 +19,9 @@ public class Banana : MonoBehaviour
             //playerObject = transformPlayer.localRotation;
             if (playerController != null)
             {
+                gameObject.transform.position = bananaOutOfMap;
                 StartCoroutine(StunPlayer());
 
-                //REMINDER!!
-                //teleport gameObject out
             }
         }
     }
@@ -39,9 +39,11 @@ public class Banana : MonoBehaviour
         PlayerGetUp();
         playerController.moveSpeed = tempMoveSpeed;
 
+        RespawnBanana();
+
         Debug.Log("player move speed:" + playerController.moveSpeed);
-        
-        
+
+
 
     }
 
@@ -52,5 +54,9 @@ public class Banana : MonoBehaviour
     void PlayerGetUp()
     {
         LeanTween.rotate(playerObject, new Vector3(0, 0, 0), (float)0.2).setEase(looptype);
+    }
+    void RespawnBanana()
+    {
+        gameObject.transform.position = BananaLocation.Instance.SetNewBananaLocation();
     }
 }
