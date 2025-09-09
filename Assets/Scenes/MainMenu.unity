@@ -3616,6 +3616,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 --- !u!1 &428695279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,6 +4656,9 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427856308
+=======
+--- !u!1 &490490565
+>>>>>>> SoundManager
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18326,7 +18330,10 @@ SceneRoots:
   - {fileID: 408563268}
   - {fileID: 192343427}
   - {fileID: 1946098921}
+<<<<<<< HEAD
   - {fileID: 428695291}
   - {fileID: 2106691063}
   - {fileID: 93523405}
   - {fileID: 635531287}
+=======
+>>>>>>> SoundManager
