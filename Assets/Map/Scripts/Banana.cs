@@ -4,6 +4,7 @@ using UnityEngine;
 public class Banana : MonoBehaviour
 {
     public float stunDuration;
+    public float speed;
     //Transform transformPlayer;
     PlayerController playerController;
     GameObject playerObject;
@@ -30,8 +31,8 @@ public class Banana : MonoBehaviour
 
     IEnumerator StunPlayer()
     {
-        float tempMoveSpeed = playerController.moveSpeed;
-        Debug.Log("tempspeed: " + tempMoveSpeed);
+        //float tempMoveSpeed = playerController.moveSpeed;
+        Debug.Log("tempspeed: " + speed);
         playerController.moveSpeed = 0;
 
         PlayerFall();
@@ -39,7 +40,7 @@ public class Banana : MonoBehaviour
         yield return new WaitForSeconds(stunDuration);
 
         PlayerGetUp();
-        playerController.moveSpeed = tempMoveSpeed;
+        playerController.moveSpeed = speed;
 
         RespawnBanana();
 
