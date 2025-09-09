@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6aef56e-4619-48b3-80db-6344b5848ef4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GI351-Project1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GI351-Project1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLv2.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1757407114582</updated>
       <workItem from="1757407114858" duration="2000" />
-      <workItem from="1757436842457" duration="5493000" />
+      <workItem from="1757436842457" duration="7017000" />
     </task>
     <servers />
   </component>
