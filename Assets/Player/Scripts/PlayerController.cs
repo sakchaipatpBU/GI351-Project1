@@ -93,11 +93,9 @@ public class PlayerController : MonoBehaviour
             // add score
             GameManager.GetInstance().AddScore();
 
-            //destroy delivery place after complete a delivery
-            //Delivery.Instance.DestroyItSelf();
+            RandomOrderLocation.Instance.ChangeDeliveryLocation();
 
-            //random new delivery place
-            RandomOrderLocation.Instance.RandomizeAndInstantiateDeliveryOnly();
+            RandomOrderLocation.Instance.ChangeStoreLocation();
         }
     }
 
