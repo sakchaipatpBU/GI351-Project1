@@ -7338,8 +7338,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Map1
   winUi: {fileID: 480397957}
   loseUi: {fileID: 1990157355}
-  pizzaOrderWin: 3
-  mapTime: 10
+  pizzaOrderWin: 5
+  mapTime: 5
   gameManager: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!4 &677208469
@@ -21138,6 +21138,7 @@ MonoBehaviour:
   - {fileID: 1314921954}
   - {fileID: 931335473}
   bananaPrefab: {fileID: 1908704404702610403, guid: 2c1720f9c87f72b478dd44556f8149ca, type: 3}
+  bananaCount: 3
 --- !u!4 &1838320852
 Transform:
   m_ObjectHideFlags: 0

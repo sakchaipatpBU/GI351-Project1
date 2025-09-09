@@ -19,6 +19,8 @@ public class Banana : MonoBehaviour
             //playerObject = transformPlayer.localRotation;
             if (playerController != null)
             {
+                SoundManager.Instance.PlaySFX("Banana");
+
                 gameObject.transform.position = bananaOutOfMap;
                 StartCoroutine(StunPlayer());
 

@@ -117,6 +117,8 @@ public class GameManager : MonoBehaviour
     }
     public void OnRestartClicked()
     {
+        SoundManager.Instance.PlaySFX("CilckButton");
+
         string activeSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(activeSceneName);
     }
