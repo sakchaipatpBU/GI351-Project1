@@ -7079,7 +7079,7 @@ MonoBehaviour:
   winUi: {fileID: 480397957}
   loseUi: {fileID: 1990157355}
   pizzaOrderWin: 3
-  mapTime: 20
+  mapTime: 10
   gameManager: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!4 &677208469
@@ -8317,7 +8317,7 @@ Transform:
   m_GameObject: {fileID: 776984206}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.61, y: -3.08, z: 0}
+  m_LocalPosition: {x: -2.61, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

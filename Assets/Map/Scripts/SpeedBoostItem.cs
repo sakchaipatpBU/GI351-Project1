@@ -17,6 +17,8 @@ public class SpeedBoostItem : MonoBehaviour
             PlayerController player = collision.GetComponent<PlayerController>();
             if (player != null)
             {
+                SoundManager.Instance.PlaySFX("Cola");
+
                 player.StartCoroutine(SpeedBoost(player));
                 //Destroy(gameObject);
                 //gameObject.SetActive(false);

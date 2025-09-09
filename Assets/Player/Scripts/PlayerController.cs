@@ -72,11 +72,11 @@ public class PlayerController : MonoBehaviour
 
         rb.linearVelocity = move;
 
-        if (interactAction.IsPressed() && (canInteractDelivery || canInteractPizzaStore))
+        if (interactAction.WasPressedThisFrame() && (canInteractDelivery || canInteractPizzaStore))
         {
             Interact();
         }
-        if (interactAction.IsPressed())
+        if (interactAction.WasPressedThisFrame())
         {
             Debug.Log("Iteract");
         }
@@ -98,6 +98,10 @@ public class PlayerController : MonoBehaviour
     {
         if (canInteractPizzaStore)
         {
+            if(!isHoldPizza)
+            {
+                SoundManager.Instance.PlaySFX("GrabPizza");
+            }
             isHoldPizza = true;
         }
         else if (canInteractDelivery && isHoldPizza)

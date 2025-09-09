@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
 
     public void AddScore()
     {
+        SoundManager.Instance.PlaySFX("Point");
+
         score++;
         Debug.Log($"Add 1 score => {score}");
         UpdateScore();
@@ -81,9 +83,12 @@ public class GameManager : MonoBehaviour
 
     public void PauseEnnable()
     {
+        SoundManager.Instance.PlaySFX("Pause");
+
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
         playerController.isPause = true;
+
     }
     public void PauseDisable()
     {
@@ -94,14 +99,20 @@ public class GameManager : MonoBehaviour
 
     public void OnMainMenuClicked()
     {
+        SoundManager.Instance.PlaySFX("CilckButton");
+
         SceneManager.LoadScene(mainMenuName);
     }
     public void OnLv1Clicked()
     {
+        SoundManager.Instance.PlaySFX("CilckButton");
+        
         SceneManager.LoadScene(lv1Name);
     }
     public void OnResumeClicked()
     {
+        SoundManager.Instance.PlaySFX("CilckButton");
+
         PauseDisable();
     }
     public void OnRestartClicked()

@@ -17,6 +17,8 @@ public class Map1 : MonoBehaviour
     }
     private void Start()
     {
+        SoundManager.Instance.PlaySFX("Ringing");
+
         gameManager = GameManager.GetInstance();
         playerController = PlayerController.GetInstance();
         gameManager.ResetScore();
@@ -33,12 +35,14 @@ public class Map1 : MonoBehaviour
     {
         if(gameManager.score >= pizzaOrderWin)
         {
+            SoundManager.Instance.PlaySFX("Win");
             winUi.SetActive(true);
             playerController.canMove = false;
             gameManager.isWin = true;
         }
         if (gameManager.isLose)
         {
+            SoundManager.Instance.PlaySFX("Lose");
             loseUi.SetActive(true);
         }
     }
