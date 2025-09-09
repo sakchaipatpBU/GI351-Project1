@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance { get; private set; }
+    public static SoundManager Instance;
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource musicSource;
-    [SerializeField] private AudioSource sfxSourcePrefab; 
+    public AudioSource musicSource;
+    public AudioSource sfxSource;
 
     [Header("Audio Clips")]
-    [SerializeField] private List<AudioClip> musicClips = new List<AudioClip>();
-    [SerializeField] private List<AudioClip> sfxClips = new List<AudioClip>();
+    public List<AudioClip> musicClips = new List<AudioClip>();
+    public List<AudioClip> sfxClips = new List<AudioClip>();
 
     private Dictionary<string, AudioClip> musicDict = new Dictionary<string, AudioClip>();
     private Dictionary<string, AudioClip> sfxDict = new Dictionary<string, AudioClip>();
@@ -34,21 +34,24 @@ public class SoundManager : MonoBehaviour
     private void LoadClips()
     {
         foreach (var clip in musicClips)
+        {
             if (!musicDict.ContainsKey(clip.name))
                 musicDict.Add(clip.name, clip);
+        }
 
         foreach (var clip in sfxClips)
+        {
             if (!sfxDict.ContainsKey(clip.name))
                 sfxDict.Add(clip.name, clip);
+        }
     }
 
-    
+  
 
     public void PlayMusic(string clipName, bool loop = true)
     {
         if (musicDict.TryGetValue(clipName, out AudioClip clip))
         {
-            if (musicSource.clip == clip && musicSource.isPlaying) return; 
             musicSource.clip = clip;
             musicSource.loop = loop;
             musicSource.Play();
@@ -59,25 +62,16 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void StopMusic() => musicSource.Stop();
-
-    public void FadeMusic(float targetVolume, float duration)
+    public void StopMusic()
     {
-        StartCoroutine(FadeAudio(musicSource, targetVolume, duration));
+        musicSource.Stop();
     }
 
-    
-
-    public void PlaySFX(string clipName, float volume = 1f, float pitch = 1f)
+    public void PlaySFX(string clipName)
     {
         if (sfxDict.TryGetValue(clipName, out AudioClip clip))
         {
-            AudioSource tempSource = Instantiate(sfxSourcePrefab, transform);
-            tempSource.clip = clip;
-            tempSource.volume = Mathf.Clamp01(volume);
-            tempSource.pitch = pitch;
-            tempSource.Play();
-            Destroy(tempSource.gameObject, clip.length / pitch); 
+            sfxSource.PlayOneShot(clip);
         }
         else
         {
@@ -85,28 +79,13 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-   
-
-    public void SetMusicVolume(float volume) => musicSource.volume = Mathf.Clamp01(volume);
-    public void SetSFXVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
-        sfxSourcePrefab.volume = Mathf.Clamp01(volume);
+        musicSource.volume = Mathf.Clamp01(volume);
     }
 
-    
-
-    private System.Collections.IEnumerator FadeAudio(AudioSource source, float targetVolume, float duration)
+    public void SetSFXVolume(float volume)
     {
-        float startVolume = source.volume;
-        float time = 0f;
-
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            source.volume = Mathf.Lerp(startVolume, targetVolume, time / duration);
-            yield return null;
-        }
-
-        source.volume = targetVolume;
+        sfxSource.volume = Mathf.Clamp01(volume);
     }
 }
