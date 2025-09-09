@@ -5,37 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6aef56e-4619-48b3-80db-6344b5848ef4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sound.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Banana.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Banana.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/CilckButton.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/CilckButton.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Cola.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Cola.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/GrabPizza.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/GrabPizza.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Lose.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Lose.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Pause.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Pause.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Point.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Point.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Ringing.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Ringing.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Song.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Song.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Win.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Win.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SoundManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SoundManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Scripts/ColaLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/Scripts/ColaLocation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Scripts/SpeedBoostItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/Scripts/SpeedBoostItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/cola.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/cola.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/store.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/store.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapLv.1 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapLv.1 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLv2.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +27,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "MainMenuUpdate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -119,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1757407114582</updated>
       <workItem from="1757407114858" duration="2000" />
-      <workItem from="1757436842457" duration="2323000" />
+      <workItem from="1757436842457" duration="7614000" />
     </task>
     <servers />
   </component>
